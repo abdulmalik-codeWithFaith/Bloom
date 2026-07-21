@@ -2,15 +2,16 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring, useMotionValue, AnimatePresence } from "framer-motion";
 
-import bottleCucumber from "@/assets/bottle-cucumber.png";
-import bottlePineapple from "@/assets/bottle-pineapple.png";
-import bottleFura from "@/assets/bottle-fura.png";
-import life1 from "@/assets/lifestyle-1.jpg";
-import life2 from "@/assets/lifestyle-2.jpg";
-import life3 from "@/assets/lifestyle-3.jpg";
-import life4 from "@/assets/lifestyle-4.jpg";
-import life5 from "@/assets/lifestyle-5.jpg";
-import life6 from "@/assets/lifestyle-6.jpg";
+import bottleCucumber from "@/assets/hero.jpg";
+import bottlePineapple from "@/assets/splash.jpg";
+import bottleFura from "@/assets/spec.jpg";
+import life1 from "@/assets/hand-zobo.jpg";
+import life2 from "@/assets/pack.jpg";
+import life3 from "@/assets/zobo.jpg";
+import life4 from "@/assets/hand-picture.jpg";
+import life5 from "@/assets/splash.jpg";
+import life6 from "@/assets/hero.jpg";
+import logo from "@/assets/white-logo.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -100,10 +101,7 @@ function Navbar() {
           }`}
         >
           <a href="#home" className="flex items-center gap-2 group">
-            <BloomLogo />
-            <span className="font-display font-bold tracking-tight text-[15px] sm:text-base">
-              Bloom<span className="text-[color:var(--bloom-green)]">.</span>
-            </span>
+            <img src={logo} alt="logo" width={100} />
           </a>
           <nav className="hidden lg:flex items-center gap-1">
             {NAV.map((n) => (
