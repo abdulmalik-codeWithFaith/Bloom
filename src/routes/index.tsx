@@ -12,6 +12,7 @@ import life4 from "@/assets/hand-picture.jpg";
 import life5 from "@/assets/splash.jpg";
 import life6 from "@/assets/hero.jpg";
 import logo from "@/assets/white-logo.jpg";
+import darkLogo from "@/assets/dark-logo.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -1087,8 +1088,7 @@ function Footer() {
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
             <div className="flex items-center gap-2">
-              <BloomLogo />
-              <span className="font-display font-bold text-lg">Bloom Sips & Beverages</span>
+              <img src={darkLogo} alt="logo" width={100} />
             </div>
             <p className="mt-4 text-white/60 max-w-sm leading-relaxed">
               Premium handcrafted natural beverages made with fresh ingredients — from Nigeria, with love.
