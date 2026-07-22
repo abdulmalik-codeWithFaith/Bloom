@@ -572,7 +572,7 @@ function Products() {
                 onMouseEnter={() => setActive(i)}
                 onFocus={() => setActive(i)}
                 onClick={() => setActive(i)}
-                className={`group text-left bg-red-400 rounded-3xl border p-6 sm:p-8 transition-all duration-500 flex items-center gap-6 ${
+                className={`group text-left rounded-3xl border p-6 sm:p-8 transition-all duration-500 flex items-center gap-6 ${
                   active === i
                     ? "border-transparent bg-[color:var(--bloom-ink)] text-white shadow-[var(--shadow-glow)] -translate-y-1"
                     : "border-black/5 bg-white hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]"
