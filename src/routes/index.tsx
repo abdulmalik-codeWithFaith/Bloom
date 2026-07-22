@@ -28,10 +28,10 @@ function Index() {
       <Hero />
       <MarqueeStrip />
       <About />
-      <Products />
-      <Benefits />
-      <WhyBloom />
       <Pricing />
+      <Benefits />
+      <Products />
+      <WhyBloom />
       <Gallery />
       <Testimonials />
       <Delivery />
@@ -460,8 +460,7 @@ function About() {
           <FadeUp delay={0.1}>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl">
               Bloom is a premium Nigerian beverage company reimagining traditional drinks with clean,
-              natural ingredients. Every bottle is freshly produced in small batches — no shortcuts,
-              no artificial flavors, no preservatives. Just pure taste.
+              natural ingredients. Every bottle is freshly produced in small batches.
             </p>
           </FadeUp>
           <div className="mt-10 grid sm:grid-cols-2 gap-4">
@@ -573,14 +572,14 @@ function Products() {
                 onMouseEnter={() => setActive(i)}
                 onFocus={() => setActive(i)}
                 onClick={() => setActive(i)}
-                className={`group text-left rounded-3xl border p-6 sm:p-8 transition-all duration-500 flex items-center gap-6 ${
+                className={`group text-left bg-red-400 rounded-3xl border p-6 sm:p-8 transition-all duration-500 flex items-center gap-6 ${
                   active === i
                     ? "border-transparent bg-[color:var(--bloom-ink)] text-white shadow-[var(--shadow-glow)] -translate-y-1"
                     : "border-black/5 bg-white hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]"
                 }`}
               >
                 <div
-                  className="w-16 h-24 sm:w-20 sm:h-28 rounded-2xl flex-shrink-0 flex items-center justify-center overflow-hidden"
+                  className="w-16 h-24 sm:w-20 sm:h-28 rounded-2xl flex-shrink-0 flex items-center justify-center"
                   style={{ background: `color-mix(in oklab, ${prod.tint} 15%, white)` }}
                 >
                   <img src={prod.img} alt="" loading="lazy" className="h-24 sm:h-28 object-contain" />
@@ -593,7 +592,7 @@ function Products() {
                     <span className={`h-1 w-1 rounded-full ${active === i ? "bg-white/40" : "bg-black/20"}`} />
                     <span className={`text-xs ${active === i ? "text-white/60" : "text-muted-foreground"}`}>50CL · 35CL</span>
                   </div>
-                  <div className="mt-1 font-display font-bold text-xl sm:text-2xl truncate">
+                  <div className="mt-1 font-display font-bold text-xl sm:text-2xl">
                     {prod.name} <span className={active === i ? "text-white/70" : "text-muted-foreground"}>· {prod.variant}</span>
                   </div>
                   <p className={`mt-1 text-sm line-clamp-2 ${active === i ? "text-white/70" : "text-muted-foreground"}`}>
@@ -1115,9 +1114,10 @@ function Footer() {
           <div className="md:col-span-2">
             <div className="text-xs uppercase tracking-widest text-white/40">Social</div>
             <ul className="mt-4 space-y-2 text-white/80">
-              <li><a href="#" className="hover:text-[color:var(--bloom-green-light)]">Instagram</a></li>
-              <li><a href="#" className="hover:text-[color:var(--bloom-green-light)]">TikTok</a></li>
-              <li><a href={WHATSAPP} className="hover:text-[color:var(--bloom-green-light)]">WhatsApp</a></li>
+              <li><a target="_blank" href="https://www.instagram.com/bloombeverages1?igsh=YW4xYmFiYm5wMGZt" className="hover:text-[color:var(--bloom-green-light)]">Instagram</a></li>
+              <li><a target="_blank"  href="https://www.tiktok.com/@bloombeverages1?_r=1&_t=ZS-97vEDw8e57C" className="hover:text-[color:var(--bloom-green-light)]">TikTok</a></li>
+              <li><a target="_blank"  href="https://x.com/BloomZobo" className="hover:text-[color:var(--bloom-green-light)]">X (Twiter)</a></li>
+              <li><a target="_blank"  href={WHATSAPP} className="hover:text-[color:var(--bloom-green-light)]">WhatsApp</a></li>
             </ul>
           </div>
         </div>
